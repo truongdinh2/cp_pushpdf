@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server 8080)",
+      "Bash(python -c \"import reportlab; print\\(reportlab.Version\\)\")"
+    ],
+    "additionalDirectories": [
+      "c:\\work\\test"
+    ]
+  }
+}
