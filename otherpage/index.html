@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Xem Tài Liệu</title>
+  <title>PVGAS – BCTN ENG</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -20,13 +20,18 @@
       padding: 18px 32px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       gap: 14px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     }
 
-    header .icon {
-      font-size: 28px;
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
+
+    header .icon { font-size: 28px; }
 
     header h1 {
       font-size: 20px;
@@ -39,6 +44,23 @@
       opacity: 0.8;
       margin-top: 2px;
     }
+
+    .btn-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-back:hover { background: rgba(255,255,255,0.25); }
 
     .container {
       max-width: 960px;
@@ -63,7 +85,7 @@
       gap: 10px;
     }
 
-    .card-header .doc-info {
+    .doc-info {
       display: flex;
       align-items: center;
       gap: 10px;
@@ -80,7 +102,6 @@
       color: white;
       font-weight: bold;
       font-size: 13px;
-      letter-spacing: 0.5px;
     }
 
     .doc-name {
@@ -109,9 +130,7 @@
       transition: background 0.2s;
     }
 
-    .btn-download:hover {
-      background: #1a237e;
-    }
+    .btn-download:hover { background: #1a237e; }
 
     .pdf-viewer {
       width: 100%;
@@ -120,73 +139,6 @@
       border: none;
       display: block;
       background: #525659;
-    }
-
-    .doc-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .doc-list h2 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #555;
-      margin-bottom: 4px;
-    }
-
-    .doc-item {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.10);
-      padding: 16px 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      text-decoration: none;
-      transition: box-shadow 0.2s;
-    }
-
-    .doc-item:hover {
-      box-shadow: 0 4px 24px rgba(57,73,171,0.18);
-    }
-
-    .doc-item .doc-info {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .doc-item .doc-name {
-      font-weight: 600;
-      font-size: 15px;
-      color: #1a237e;
-    }
-
-    .doc-item .doc-meta {
-      font-size: 12px;
-      color: #888;
-      margin-top: 2px;
-    }
-
-    .btn-open {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: #f0f2f5;
-      color: #3949ab;
-      padding: 8px 16px;
-      border-radius: 6px;
-      font-size: 13px;
-      font-weight: 500;
-      transition: background 0.2s;
-    }
-
-    .doc-item:hover .btn-open {
-      background: #e8eaf6;
     }
 
     footer {
@@ -200,11 +152,14 @@
 <body>
 
   <header>
-    <div class="icon">📄</div>
-    <div>
-      <h1>Cổng Xem Tài Liệu</h1>
-      <p>Xem và tải xuống tài liệu PDF</p>
+    <div class="header-left">
+      <div class="icon">📋</div>
+      <div>
+        <h1>PVGAS – BCTN ENG</h1>
+        <p>PVGAS-BCTN-ENG-130524</p>
+      </div>
     </div>
+    <a href="../" class="btn-back">← Home</a>
   </header>
 
   <div class="container">
@@ -213,51 +168,25 @@
         <div class="doc-info">
           <div class="pdf-icon">PDF</div>
           <div>
-            <div class="doc-name">Báo Cáo Thị Trường – Quý 1/2026</div>
-            <div class="doc-meta">document.pdf • Cập nhật tháng 04/2026</div>
+            <div class="doc-name">PVGAS-BCTN-ENG-130524 copy.pdf</div>
+            <div class="doc-meta">Updated 05/2024</div>
           </div>
         </div>
-        <a href="document.pdf" download class="btn-download">
-          ⬇ Tải xuống
+        <a href="../PVGAS-BCTN-ENG-130524 copy.pdf" download class="btn-download">
+          &#11015; Download
         </a>
       </div>
 
       <embed
-        src="document.pdf"
+        src="../PVGAS-BCTN-ENG-130524 copy.pdf"
         type="application/pdf"
         class="pdf-viewer"
       >
     </div>
   </div>
 
-  <div class="container">
-    <div class="doc-list">
-      <h2>Tài liệu khác</h2>
-      <a href="DATABASES/" class="doc-item">
-        <div class="doc-info">
-          <div class="pdf-icon">PDF</div>
-          <div>
-            <div class="doc-name">DATABASES.pdf</div>
-            <div class="doc-meta">Tài liệu cơ sở dữ liệu</div>
-          </div>
-        </div>
-        <span class="btn-open">Xem →</span>
-      </a>
-      <a href="otherpage/" class="doc-item">
-        <div class="doc-info">
-          <div class="pdf-icon">PDF</div>
-          <div>
-            <div class="doc-name">PVGAS-BCTN-ENG-130524 copy.pdf</div>
-            <div class="doc-meta">PVGAS – BCTN ENG</div>
-          </div>
-        </div>
-        <span class="btn-open">Xem →</span>
-      </a>
-    </div>
-  </div>
-
   <footer>
-    © 2026 · Tài liệu nội bộ
+    &copy; 2026 &middot; Internal Document
   </footer>
 
 </body>
